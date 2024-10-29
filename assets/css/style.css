@@ -60,31 +60,30 @@
 .circle.c6 { animation-duration: 3s; }
 @keyframes circle-anim { 50% { transform: scale(0.2) rotateX(360deg) rotateY(360deg); } }
 
-
 /* Centered Profile Image and Quote */
 .profile-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 50px; /* Adjust as needed */
+  margin-top: 50px;
 }
 
-.profile-image {
-  width: 200px; /* Adjust size as needed */
-  height: 200px;
-  border-radius: 50%; /* Makes the image circular */
-  object-fit: cover; /* Ensures the image fills the circle */
+.circle-image {
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  object-fit: cover;
   margin-bottom: 15px;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .profile-quote {
-  color: #6c757d; /* Adjust color if needed */
+  color: #6c757d;
   font-size: 1.1em;
-  max-width: 80%; /* Restrict width on large screens */
+  max-width: 80%;
   text-align: center;
+  margin-top: 15px;
 }
-
 
 
 .four, #ou { animation: four-anim cubic-bezier(0.39, 0.575, 0.565, 1) infinite; }
