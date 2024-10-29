@@ -11,10 +11,17 @@ initTheme();
 
 function initTheme() {
   const savedTheme = localStorage.getItem(STORAGE_KEY);
-  const isDarkMode = window.matchMedia && window.matchMedia(QUERY_KEY).matches;
 
-  // Set theme based on saved preference or system setting
-  setTheme(savedTheme || (isDarkMode ? themes.DARK : themes.LIGHT));
+  if (savedTheme) {
+    // Storage theme
+    setTheme(savedTheme);
+  } else if (window.matchMedia && window.matchMedia(QUERY_KEY).matches) {
+    // system theme
+    setTheme(themes.DARK);
+  } else {
+    // Default theme
+    setTheme(themes.LIGHT);
+  }
 
   // Watch for system theme changes
   window.matchMedia(QUERY_KEY).addEventListener("change", (e) => {
@@ -36,10 +43,4 @@ function getTheme() {
 
 function setTheme(value) {
   document.documentElement.setAttribute(THEME_ATTR, value);
-
-  // Change icon based on theme
-  const themeIcon = document.getElementById("theme-icon");
-  if (themeIcon) {
-    themeIcon.className = value === themes.DARK ? "fas fa-sun" : "fas fa-moon";
-  }
 }
