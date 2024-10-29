@@ -28,13 +28,13 @@
   <link rel="stylesheet" href="./assets/css/style.css">
 
   <!-- Theme Script -->
-  <script src="./assets/js/theme.js" defer></script>
+  <script src="./assets/js/theme.js" defer></script> <!-- Ensure theme.js is linked -->
 </head>
 
 <body class="h-100 d-flex flex-column">
   <main class="flex-shrink-0 container mt-5">
     <nav class="navbar navbar-expand-lg navbar-themed">
-      <a class="navbar-brand" href="/"><h5><b>MD NAZMUL</b></h5></a>
+      <a class="navbar-brand" href="index.html"><h5><b>MD NAZMUL</b></h5></a>
 
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <i class="fas fa-1x fa-bars text-themed"></i>
@@ -42,11 +42,12 @@
 
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="navbar-nav ml-auto">
-          <a class="nav-item nav-link" href="./projects/">Projects</a>
+          <a class="nav-item nav-link" href="./projects/index.html">Projects</a>
           <a class="nav-item nav-link" href="./about/index.html">About</a>
 
           <!-- Theme Toggle Button -->
           <span id="theme-toggler" class="nav-item nav-link" role="button" onclick="toggleTheme()">
+            <i class="fas fa-moon" id="theme-icon"></i>
           </span>
         </div>
       </div>
